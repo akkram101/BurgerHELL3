@@ -133,7 +133,7 @@ export default function Menu() {
 		if(quantity<=1){
 			alert(`Cannot be less than 1`)
 		}else{
-			fetch(`http://localhost:3009/api/users/${id}/lessCartQuant`,{
+			fetch(`https://capstone2-bederi.herokuapp.com/api/users/${id}/lessCartQuant`,{
 			method:"PATCH",
 			headers:{
 				"Content-Type":"application/json",
