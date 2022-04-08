@@ -12,7 +12,7 @@ export default function Profile(){
 	const[admins,setAdmins]=useState()
 
 	const fetchUsers = () =>{
-		fetch(`http://localhost:3009/api/users/users`,{
+		fetch(`https://capstone2-bederi.herokuapp.com/api/users/users`,{
 				method:"GET",
 				headers:{
 					"Authorization":`Bearer ${token}`
@@ -51,7 +51,7 @@ export default function Profile(){
 	}
 
 	const fetchAdmins = () =>{
-		fetch(`http://localhost:3009/api/users/admins`,{
+		fetch(`https://capstone2-bederi.herokuapp.com/api/users/admins`,{
 				method:"GET",
 				headers:{
 					"Authorization":`Bearer ${token}`
@@ -114,7 +114,7 @@ export default function Profile(){
 	// }
 
 	const handleDelete = (userEmail) =>{
-			fetch(`http://localhost:3009/api/users/deleteUser`,{
+			fetch(`https://capstone2-bederi.herokuapp.com/api/users/deleteUser`,{
 				method:"DELETE",
 				headers:{
 					"Content-Type":"application/json",
@@ -132,7 +132,7 @@ export default function Profile(){
 			}
 
 	const handleAdmin = (userEmail) =>{
-			fetch(`http://localhost:3009/api/users/isAdminT`,{
+			fetch(`https://capstone2-bederi.herokuapp.com/api/users/isAdminT`,{
 				method:"PATCH",
 				headers:{
 					"Content-Type":"application/json",
@@ -150,7 +150,7 @@ export default function Profile(){
 			}
 	
 	const handleUser = (userEmail) =>{
-			fetch(`http://localhost:3009/api/users/isAdminF`,{
+			fetch(`https://capstone2-bederi.herokuapp.com/api/users/isAdminF`,{
 				method:"PATCH",
 				headers:{
 					"Content-Type":"application/json",

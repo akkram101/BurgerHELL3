@@ -15,7 +15,7 @@ export default function MenuAdminView(){
 	const [EditItemPrice, setItemPrice]=useState()
 
 	const Inactive =  (id) =>{
-		fetch(`http://localhost:3009/api/item/${id}/soldOut`,{
+		fetch(`https://capstone2-bederi.herokuapp.com/api/item/${id}/soldOut`,{
 			method:"PATCH",
 			headers:{
 				"Authorization":`Bearer ${token}`
@@ -28,7 +28,7 @@ export default function MenuAdminView(){
 	}
 
 	const Active =  (id) =>{
-		fetch(`http://localhost:3009/api/item/${id}/returnItem`,{
+		fetch(`https://capstone2-bederi.herokuapp.com/api/item/${id}/returnItem`,{
 			method:"PATCH",
 			headers:{
 				"Authorization":`Bearer ${token}`
@@ -120,7 +120,7 @@ export default function MenuAdminView(){
 			} 
 		})
 
-		fetch(`http://localhost:3009/api/item/burgers`,{
+		fetch(`https://capstone2-bederi.herokuapp.com/api/item/burgers`,{
 				method:"GET"
 			})
 			.then(result=>result.json())
@@ -166,7 +166,7 @@ export default function MenuAdminView(){
 							        <p>{description}</p>
 							      </div>
 							      <div className="modal-footer">
-							        <button type="submit" className="btn btn-warning btn-block" data-dismiss="modal" onClick={()=>addToCart(result,quantity)}>Add to Cart</button>
+							        <button type="submit" className="btn btn-warning btn-block" data-dismiss="modal">Edit</button>
 							      </div>
 							    </div>
 							  </div>
@@ -178,7 +178,7 @@ export default function MenuAdminView(){
 					)
 				} 
 			})	
-		fetch(`http://localhost:3009/api/item/sides`,{
+		fetch(`https://capstone2-bederi.herokuapp.com/api/item/sides`,{
 				method:"GET"
 			})
 			.then(result=>result.json())
@@ -224,7 +224,7 @@ export default function MenuAdminView(){
 							        <p>{description}</p>
 							      </div>
 							      <div className="modal-footer">
-							        <button type="submit" className="btn btn-warning btn-block" data-dismiss="modal" onClick={()=>addToCart(result,quantity)}>Add to Cart</button>
+							        <button type="submit" className="btn btn-warning btn-block" data-dismiss="modal">Edit</button>
 							      </div>
 							    </div>
 							  </div>
@@ -236,7 +236,7 @@ export default function MenuAdminView(){
 					)
 				} 
 			})
-		fetch(`http://localhost:3009/api/item/beverages`,{
+		fetch(`https://capstone2-bederi.herokuapp.com/api/item/beverages`,{
 				method:"GET"
 			})
 			.then(result=>result.json())
@@ -282,7 +282,7 @@ export default function MenuAdminView(){
 							        <p>{description}</p>
 							      </div>
 							      <div className="modal-footer">
-							        <button type="submit" className="btn btn-warning btn-block" data-dismiss="modal" onClick={()=>addToCart(result,quantity)}>Add to Cart</button>
+							        <button type="submit" className="btn btn-warning btn-block" data-dismiss="modal">Edit</button>
 							      </div>
 							    </div>
 							  </div>
